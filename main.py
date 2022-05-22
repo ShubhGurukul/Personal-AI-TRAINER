@@ -2,14 +2,19 @@ import cv2
 import numpy as np
 import time
 from cvzone import PoseModule as pm
-# import PoseModule as pm
+
 # cap = cv2.VideoCapture(0)
+# cap.set(3,1280)
+# cap.set(4,720)
+
 cap = cv2.VideoCapture('Videos\Crossfit.mp4')
 # cap = cv2.VideoCapture('Videos\fitness.mp4')
+
 detector = pm.PoseDetector()
 count = 0
 dir = 0
 pTime = 0
+
 while True:
     success, img = cap.read()
 #     img = cv2.flip(img, 1)
